@@ -13,6 +13,6 @@ cloudinary.config({
 });
 
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 8000, () => {
     console.log(`server is running at http://localhost:${process.env.PORT}`);
 })
