@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@canvasjs/react-charts": "^1.0.2",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@mui/icons-material": "^5.15.15",
@@ -35,7 +34,6 @@
     "react-router-dom": "^6.22.3",
     "react-simple-star-rating": "^5.1.7",
     "react-toastify": "^10.0.5",
-    "reactjs-navbar": "^1.0.2",
     "redux": "^5.0.1",
     "redux-thunk": "^3.1.0"
   },
