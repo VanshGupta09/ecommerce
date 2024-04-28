@@ -7,6 +7,7 @@ export const sendToken = asyncHandler(async (user, statusCode, res) => {
     const options = {
         httpOnly: true,
         secure: true,
+        sameSite:"none",
         // expires: new Date(
         //     Date.now() + 5 * 24 * 60 * 60 * 1000 // 5 days
         // ),
