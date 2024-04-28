@@ -18,9 +18,6 @@ import { loadStripe } from "@stripe/stripe-js";
 const Home = lazy(() => import("./assets/pages/Home.jsx"));
 const Footer = lazy(() => import("./assets/components/Footer.jsx"));
 const Header = lazy(() => import("./assets/components/Header.jsx"));
-const ProtectedRoute = lazy(() =>
-  import("./assets/components/ProtectedRoute.jsx")
-);
 const ProductDetails = lazy(() =>
   import("./assets/components/ProductDetails.jsx")
 );
