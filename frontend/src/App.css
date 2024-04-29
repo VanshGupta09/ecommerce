@@ -292,7 +292,7 @@ p {
 
 .loginSignUpBox {
   width: 25vw;
-  height: 60vh;
+  /* height: 60vh; */
   background-color: white;
   box-sizing: border-box;
   overflow: hidden;
@@ -486,7 +486,7 @@ p {
 
 .updateProfileBox {
   width: 25vw;
-  height: 65vh;
+  /* height: 65vh; */
   background-color: white;
   box-sizing: border-box;
   overflow: hidden;
@@ -699,7 +699,8 @@ p {
   background-color: rgb(25, 118, 210) !important;
   color: white;
 }
-.css-1sdz8ad{
+
+.css-1sdz8ad {
   max-height: 50vh;
 }
 
@@ -993,6 +994,10 @@ p {
 
 .css-10vg0a6-MuiResponsiveChart-container {
   margin: 20px auto;
+}
+
+.css-rccht4 {
+  width: auto;
 }
 
 /* Responsive start */
