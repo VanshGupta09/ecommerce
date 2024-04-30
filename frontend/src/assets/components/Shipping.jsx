@@ -51,7 +51,7 @@ const Shipping = () => {
       <MetaData title={"Shipping Details"} />
       <CheckoutSteps activeSteps={0} />
       <div className="updateProfileContainer">
-        <div className="updateProfileBox">
+        <div className="updateProfileBox shippingBox">
           <Typography variant="h5" sx={{ textAlign: "center" }}>
             Shipping
           </Typography>

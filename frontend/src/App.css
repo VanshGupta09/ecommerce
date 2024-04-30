@@ -292,7 +292,7 @@ p {
 
 .loginSignUpBox {
   width: 25vw;
-  /* height: 60vh; */
+  height: 60vh;
   background-color: white;
   box-sizing: border-box;
   overflow: hidden;
@@ -486,10 +486,14 @@ p {
 
 .updateProfileBox {
   width: 25vw;
-  /* height: 65vh; */
+  height: 65vh;
   background-color: white;
   box-sizing: border-box;
   overflow: hidden;
+}
+
+.shippingBox {
+  height: 80vh;
 }
 
 .updateProfileBox>h5 {
