@@ -6,14 +6,13 @@ import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import MetaData from "./MetaData";
 import Sidebar from "./Sidebar";
-import {
-  productReset,
-} from "../../redux/productsSlice";
+import { productReset } from "../../redux/productsSlice";
 import axios from "axios";
 import { BASE_URL } from "../../../config";
 import { Link, useNavigate } from "react-router-dom";
 import { Button, Typography } from "@mui/material";
 import Loader from "./Loader";
+import Box from "@mui/material/Box";
 import {
   allUsersFail,
   allUsersReq,
@@ -167,9 +166,9 @@ const UsersList = () => {
         theme: "light",
       });
       dispatch(resetState());
-    //   navigate("/admin/users");
+      //   navigate("/admin/users");
     }
-  }, [error, dispatch, userDeleted,message]);
+  }, [error, dispatch, userDeleted, message]);
 
   return (
     <>
@@ -185,14 +184,16 @@ const UsersList = () => {
             >
               All Users
             </Typography>
-            <DataGrid
-              rows={rows}
-              columns={columns}
-              pageSizeOptions={[10]}
-              disableRowSelectionOnClick
-              className="productListTable"
-              autoHeight
-            />
+            <Box sx={{ width: "100%" }}>
+              <DataGrid
+                rows={rows}
+                columns={columns}
+                pageSizeOptions={[10]}
+                disableRowSelectionOnClick
+                className="productListTable"
+                autoHeight
+              />
+            </Box>
           </div>
         </div>
       </div>
