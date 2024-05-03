@@ -42,8 +42,6 @@ const NewProduct = () => {
   const [imagesPreview, setImagesPreview] = useState([]);
 
   const categories = [
-    "dfgh",
-    "shirt",
     "Laptop",
     "Footwear",
     "Bottom",
