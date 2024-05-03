@@ -196,7 +196,7 @@ const ProductReviews = () => {
                 <StarIcon />
                 <input
                   type="text"
-                  placeholder="Name"
+                  placeholder="Product Id"
                   required
                   value={productId}
                   onChange={(e) => setProductId(e.target.value)}
