@@ -89,7 +89,7 @@ const NewProduct = () => {
       const res = await axios.post(`${BASE_URL}/api/v1/product/new`, myForm, {
         withCredentials: true,
         headers: {
-          "Content-Type": "multipart/form-data",
+          "Content-Type": "application/json",
         },
       });
       console.log(res);
