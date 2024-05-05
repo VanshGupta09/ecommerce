@@ -51,6 +51,8 @@ function Header() {
 
       if (res?.data?.success) {
         dispatch(logoutSuccess());
+        btnRef.current.classList.remove("collapsed");
+        navRef.current.classList.remove("show");
         navigate("/");
         toast.success("Logged Out successfully", {
           position: "bottom-right",

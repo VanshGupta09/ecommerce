@@ -125,8 +125,8 @@ const loginUser = asyncHandler(async (req, res) => {
 })
 
 const logOutUser = asyncHandler((req, res) => {
-
-    res.cookie("jwtToken", null, {
+    
+    res.cookie("jwtToken", "", {
         httpOnly: true,
         expires: new Date(Date.now())
     })
