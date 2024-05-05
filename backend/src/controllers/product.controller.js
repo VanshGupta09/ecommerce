@@ -34,6 +34,7 @@ const getAdminProducts = asyncHandler(async (req, res) => {
 })
 
 const addProducts = asyncHandler(async (req, res) => {
+    console.log(req.body);
     let images = [];
 
     if (typeof req.body.images === "string") {
