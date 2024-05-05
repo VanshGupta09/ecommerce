@@ -58,7 +58,7 @@ const UpdateOrder = () => {
       const res = await axios.patch(`${BASE_URL}/api/v1/admin/${id}`, myForm, {
         withCredentials: true,
         headers: {
-          "Content-Type": "multipart/form-data",
+          "Content-Type": "application/json",
         },
       });
       console.log(res);
