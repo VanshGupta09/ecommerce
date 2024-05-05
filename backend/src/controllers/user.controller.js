@@ -125,12 +125,15 @@ const loginUser = asyncHandler(async (req, res) => {
 })
 
 const logOutUser = asyncHandler((req, res) => {
-    
-    res.cookie("jwtToken", "", {
-        httpOnly: true,
-        expires: new Date(Date.now())
-    })
+    console.log("logout req");
 
+    res.cookie('jwtToken', '', {
+        httpOnly: true,
+        secure: true,
+        sameSite: "none",
+        expires: new Date(0),
+    });
+    
     res.status(200)
         .json(
             new ApiResponse(200, {}, "Logged Out")

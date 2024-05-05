@@ -34,11 +34,7 @@ function Header() {
   const btnRef = useRef(null);
   const navRef = useRef(null);
 
-  const pages = [
-    { name: "Home", link: "/" },
-    { name: "Products", link: "/products" },
-    { name: `Cart (${cartItems.length})`, link: "/cart" },
-  ];
+  const pages = [];
   const settings = [];
 
   const logOut = async () => {
@@ -82,6 +78,12 @@ function Header() {
       },
       { name: "Orders", link: "/orders", icon: <ContentPasteIcon /> },
       { name: "Logout", link: "/logout", func: logOut, icon: <LogoutIcon /> }
+    );
+
+    pages.push(
+      { name: "Home", link: "/" },
+      { name: "Products", link: "/products" },
+      { name: `Cart (${cartItems.length})`, link: "/cart" }
     );
   } else {
     settings.push({ name: "Login", link: "/login", icon: <LoginIcon /> });

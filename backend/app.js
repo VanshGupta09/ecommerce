@@ -25,9 +25,6 @@ app.use(bodyParser.urlencoded({
   extended: true,
   // limit: "50mb"
 }))
-// app.use(express.static("public"))
-app.use(fileUpload())
-
 
 //importing routes
 import product from "./src/routes/product.route.js";
