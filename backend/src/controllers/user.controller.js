@@ -9,7 +9,7 @@ import { uplpadOnCloudinary } from "../utils/cloudinary.js";
 import { v2 as cloudinary } from "cloudinary";
 
 const registerUser = asyncHandler(async (req, res) => {
-    // console.log(req.body.avatar);
+    // console.log(req.body);
 
     const myCloud = await cloudinary.uploader.upload(req.body.avatar, {
         folder: "ecommerce/avatar",

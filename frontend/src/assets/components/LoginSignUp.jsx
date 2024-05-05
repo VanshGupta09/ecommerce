@@ -7,7 +7,7 @@ import LockOpenIcon from "@mui/icons-material/LockOpen";
 import FaceIcon from "@mui/icons-material/Face";
 import profleImg from "../images/Profile.png";
 import { useDispatch, useSelector } from "react-redux";
-import {  toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -69,7 +69,7 @@ const LoginSignUp = () => {
           password: loginPassword,
         },
         {
-          withCredentials:true,
+          withCredentials: true,
           headers: {
             "Content-Type": "application/json",
           },
@@ -106,16 +106,12 @@ const LoginSignUp = () => {
 
     try {
       dispatch(startRegister());
-      const res = await axios.post(
-        `${BASE_URL}/api/v1/register`,      
-        myForm,
-        {
-          withCredentials:true,
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        }
-      );
+      const res = await axios.post(`${BASE_URL}/api/v1/register`, myForm, {
+        withCredentials: true,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
       console.log(res);
 
       if (res?.data?.success) {
@@ -148,7 +144,6 @@ const LoginSignUp = () => {
           setAvatar(reader.result);
         }
       };
-
       reader.readAsDataURL(e.target.files[0]);
     } else {
       setUser((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -168,7 +163,6 @@ const LoginSignUp = () => {
         progress: undefined,
         theme: "light",
       });
-      console.log(error);
     }
     if (auth) {
       navigate("/account");
