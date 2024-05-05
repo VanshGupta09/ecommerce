@@ -6,8 +6,11 @@
   padding: 0%;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif !important;
-  scroll-behavior: smooth;
   /* cursor: url("./assets/images/cursor.png"),auto; */
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 a {
@@ -1002,6 +1005,10 @@ p {
 
 .css-rccht4 {
   width: auto;
+}
+
+.css-1rtad1 {
+  left: 0;
 }
 
 /* Responsive start */

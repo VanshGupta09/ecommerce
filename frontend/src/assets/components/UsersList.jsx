@@ -12,7 +12,6 @@ import { BASE_URL } from "../../../config";
 import { Link, useNavigate } from "react-router-dom";
 import { Button, Typography } from "@mui/material";
 import Loader from "./Loader";
-import Box from "@mui/material/Box";
 import {
   allUsersFail,
   allUsersReq,
@@ -121,6 +120,8 @@ const UsersList = () => {
     });
   });
 
+
+
   const getAllUsers = async () => {
     try {
       dispatch(allUsersReq());
@@ -168,7 +169,10 @@ const UsersList = () => {
       dispatch(resetState());
       //   navigate("/admin/users");
     }
-  }, [error, dispatch, userDeleted, message]);
+  }, [error, userDeleted, message]);
+  // }, [error, dispatch, userDeleted, message]);
+
+  console.log(rows);
 
   return (
     <>
@@ -184,23 +188,21 @@ const UsersList = () => {
             >
               All Users
             </Typography>
-            <Box sx={{ width: "100%" }}>
-              <DataGrid
-                rows={rows}
-                columns={columns}
-                initialState={{
-                  pagination: {
-                    paginationModel: {
-                      pageSize: 10,
-                    },
+            <DataGrid
+              rows={rows}
+              columns={columns}
+              initialState={{
+                pagination: {
+                  paginationModel: {
+                    pageSize: 10,
                   },
-                }}
-                pageSizeOptions={[10]}
-                disableRowSelectionOnClick
-                className="productListTable"
-                autoHeight
-              />
-            </Box>
+                },
+              }}
+              pageSizeOptions={[10]}
+              disableRowSelectionOnClick
+              className="productListTable"
+              autoHeight
+            />
           </div>
         </div>
       </div>
